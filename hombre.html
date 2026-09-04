@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymshark Clone - Hombre</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="promo-bar">
+            <p><u>Obtén un 10 % de descuento en tu primer pedido al suscribirte a nuestros correos</u></p>
+        </div>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="mujer.html">Mujeres</a>
+                <a href="hombre.html" style="font-weight: 800; text-decoration: underline;">Hombre</a>
+                <a href="accesorios.html">Accesorios</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>GYMSHARK</h1></a>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <span class="icon">🔍</span>
+                    <input type="text" id="buscador" placeholder="Busca 'short' o 'camiseta'...">
+                </div>
+                <div class="icons">
+                    <span style="cursor:pointer;" id="icono-favoritos" onclick="window.location.href='favoritos.html'" title="Mis Favoritos">🤍</span>
+                    <a href="perfil.html" style="text-decoration: none; color: black;" title="Mi Perfil"><span>👤</span></a>
+                    <span style="cursor:pointer;" id="icono-bolsa" title="Mi Bolsa">🛍️</span>
+                    <span id="contador-carrito" class="cart-counter">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="productos-destacados">
+            <div class="section-header">
+                <h2>SECCIÓN HOMBRE</h2>
+            </div>
+            
+            <div class="grid-productos" id="contenedor-productos">
+                <!-- Producto Hombre 1 -->
+                <article class="producto-card" data-nombre="camiseta stringer negra">
+                    <div class="img-container">
+                        <span class="heart-icon">🤍</span>
+                        <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=500&q=80" alt="Camiseta Stringer">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Camiseta Stringer Legacy</h3>
+                        <p class="precio">$19.990</p>
+                        <button class="btn-agregar-carrito" data-nombre="Camiseta Stringer Legacy" data-precio="19990">Añadir a la bolsa</button>
+                    </div>
+                </article>
+
+                <!-- Producto Hombre 2 -->
+                <article class="producto-card" data-nombre="jogger gris">
+                    <div class="img-container">
+                        <span class="heart-icon">🤍</span>
+                        <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&q=80" alt="Joggers">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Jogger Crest</h3>
+                        <p class="precio">$39.990</p>
+                        <button class="btn-agregar-carrito" data-nombre="Jogger Crest" data-precio="39990">Añadir a la bolsa</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GYMSHARK CLONE. PARA FINES EDUCATIVOS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

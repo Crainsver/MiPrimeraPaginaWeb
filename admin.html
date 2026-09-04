@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Agregar Producto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-nav" style="justify-content: center;">
+            <div class="nav-center">
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>GYMSHARK | ADMIN</h1></a>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding: 60px 20px;">
+        <section class="admin-section" style="border: none; background: transparent;">
+            <div class="admin-container">
+                <h2>SISTEMA DE INVENTARIO (ADMIN)</h2>
+                <form id="formProducto">
+                    <div class="campo-doble">
+                        <div class="campo">
+                            <label>CÓDIGO</label>
+                            <input type="text" id="codigo" placeholder="Ej: GYM-001">
+                            <span id="errorCodigo" class="error"></span>
+                        </div>
+                        <div class="campo">
+                            <label>NOMBRE DEL PRODUCTO</label>
+                            <input type="text" id="nombre" placeholder="Ej: Pantalón Corto">
+                            <span id="errorNombre" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label>CATEGORÍA</label>
+                        <select id="categoria">
+                            <option value="">Selecciona...</option>
+                            <option value="Hombre">Hombre</option>
+                            <option value="Mujer">Mujer</option>
+                        </select>
+                        <span id="errorCategoria" class="error"></span>
+                    </div>
+                    <button type="submit" class="btn-submit">REGISTRAR PRODUCTO</button>
+                </form>
+                <div id="mensaje" class="exito"></div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

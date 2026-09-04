@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymshark Clone - Mi Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-nav" style="justify-content: center;">
+            <div class="nav-center">
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>GYMSHARK</h1></a>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding: 60px 20px; background-color: #f9f9f9; min-height: 80vh;">
+        <div class="admin-container" style="max-width: 400px; padding: 40px;">
+            <h2 style="text-align: center; border-bottom: 2px solid #000; padding-bottom: 15px;">INICIAR SESIÓN</h2>
+            <form id="formPerfil" style="margin-top: 20px;">
+                <div class="campo">
+                    <label>CORREO ELECTRÓNICO</label>
+                    <input type="email" placeholder="tu@correo.com" required>
+                </div>
+                <div class="campo">
+                    <label>CONTRASEÑA</label>
+                    <input type="password" placeholder="********" required>
+                </div>
+                <button type="button" class="btn-submit" onclick="alert('¡Sesión iniciada con éxito! Redirigiendo al inicio...'); window.location.href='index.html';">ENTRAR</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px; font-size: 0.85rem; font-weight: 600;">
+                ¿No tienes cuenta? <a href="#" style="color: #000;">Regístrate aquí</a>
+            </p>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

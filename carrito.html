@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymshark Clone - Tu Bolsa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="promo-bar">
+            <p><u>Obtén un 10 % de descuento en tu primer pedido al suscribirte a nuestros correos</u></p>
+        </div>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="mujer.html">Mujeres</a>
+                <a href="hombre.html">Hombre</a>
+                <a href="accesorios.html">Accesorios</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>GYMSHARK</h1></a>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <span class="icon">🔍</span>
+                    <input type="text" id="buscador" placeholder="Busca 'camiseta'...">
+                </div>
+                <div class="icons">
+                    <span>🤍</span>
+                    <span>👤</span>
+                    <span style="cursor:pointer;" id="icono-bolsa" title="Mi Bolsa">🛍️</span>
+                    <span id="contador-carrito" class="cart-counter">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="carrito-main">
+        <div class="carrito-container">
+            <h2>TU BOLSA</h2>
+            
+            <!-- Aquí se inyectarán los productos con JavaScript -->
+            <div id="lista-carrito">
+                <!-- Los items aparecerán aquí -->
+            </div>
+
+            <div class="carrito-resumen">
+                <div class="total-fila">
+                    <h3>TOTAL ESTIMADO</h3>
+                    <h3 id="precio-total">$0</h3>
+                </div>
+                <button class="btn-checkout">PAGAR AHORA</button>
+                <div class="botones-secundarios">
+                    <button id="btn-vaciar" class="btn-vaciar">Vaciar Bolsa</button>
+                    <!-- BOTÓN PARA VOLVER AL INICIO -->
+                    <button onclick="window.location.href='index.html'" class="btn-volver">← Volver a la Tienda</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GYMSHARK CLONE. PARA FINES EDUCATIVOS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

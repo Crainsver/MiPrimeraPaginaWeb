@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymshark Clone - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="promo-bar">
+            <p><u>Obtén un 10 % de descuento en tu primer pedido al suscribirte a nuestros correos</u></p>
+        </div>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="mujer.html">Mujeres</a>
+                <a href="hombre.html">Hombre</a>
+                <a href="accesorios.html">Accesorios</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>GYMSHARK</h1></a>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <span class="icon">🔍</span>
+                    <input type="text" id="buscador" placeholder="Busca 'camiseta'...">
+                </div>
+                <!-- Íconos actualizados con enlaces -->
+                <div class="icons">
+                    <span style="cursor:pointer;" id="icono-favoritos" onclick="window.location.href='favoritos.html'" title="Mis Favoritos">🤍</span>
+                    <a href="perfil.html" style="text-decoration: none; color: black;" title="Mi Perfil"><span>👤</span></a>
+                    <span style="cursor:pointer;" id="icono-bolsa" title="Mi Bolsa">🛍️</span>
+                    <span id="contador-carrito" class="cart-counter">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="hero-buttons">
+                <button class="btn-light" onclick="window.location.href='mujer.html'">COMPRAR MUJERES</button>
+                <button class="btn-dark" onclick="window.location.href='hombre.html'">COMPRAR HOMBRES</button>
+            </div>
+        </section>
+
+        <section class="productos-destacados">
+            <div class="section-header">
+                <h2>LO MÁS NUEVO</h2>
+                <a href="#" class="link-ver-todo">Ver todo</a>
+            </div>
+            
+            <div class="grid-productos" id="contenedor-productos">
+                <!-- Producto 1 -->
+                <article class="producto-card" data-nombre="camiseta oversize negra">
+                    <div class="img-container">
+                        <span class="heart-icon">🤍</span>
+                        <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=500&q=80" alt="Camiseta Oversize">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Camiseta Heavyweight Oversize</h3>
+                        <p class="precio">$24.990</p>
+                        <button class="btn-agregar-carrito" data-nombre="Camiseta Heavyweight Oversize" data-precio="24990">Añadir a la bolsa</button>
+                    </div>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="producto-card" data-nombre="leggings adapt">
+                    <div class="img-container">
+                        <span class="heart-icon">🤍</span>
+                        <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500&q=80" alt="Leggings">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Leggings Adapt Animal</h3>
+                        <p class="precio">$45.990</p>
+                        <button class="btn-agregar-carrito" data-nombre="Leggings Adapt Animal" data-precio="45990">Añadir a la bolsa</button>
+                    </div>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="producto-card" data-nombre="short deportivo 5 inch">
+                    <div class="img-container">
+                        <span class="heart-icon">🤍</span>
+                        <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&q=80" alt="Short 5 inch">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Short Deportivo 5"</h3>
+                        <p class="precio">$29.990</p>
+                        <button class="btn-agregar-carrito" data-nombre="Short Deportivo 5 pulgadas" data-precio="29990">Añadir a la bolsa</button>
+                    </div>
+                </article>
+
+                <!-- Producto 4 -->
+                <article class="producto-card" data-nombre="top deportivo">
+                    <div class="img-container">
+                        <span class="heart-icon">🤍</span>
+                        <img src="https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=500&q=80" alt="Top Deportivo">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Top Deportivo Ruched</h3>
+                        <p class="precio">$32.990</p>
+                        <button class="btn-agregar-carrito" data-nombre="Top Deportivo Ruched" data-precio="32990">Añadir a la bolsa</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="admin-section">
+            <div class="admin-container">
+                <h2>ADMINISTRACIÓN - AGREGAR PRODUCTO</h2>
+                <form id="formProducto">
+                    <div class="campo-doble">
+                        <div class="campo">
+                            <label for="codigo">CÓDIGO (SKU)</label>
+                            <input type="text" id="codigo" placeholder="Ej: GYM-001">
+                            <span class="error" id="errorCodigo"></span>
+                        </div>
+                        <div class="campo">
+                            <label for="nombre">NOMBRE DEL PRODUCTO</label>
+                            <input type="text" id="nombre" placeholder="Ej: Camiseta Vital">
+                            <span class="error" id="errorNombre"></span>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="categoria">CATEGORÍA</label>
+                        <select id="categoria">
+                            <option value="">Selecciona una opción</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujeres</option>
+                            <option value="accesorios">Accesorios</option>
+                        </select>
+                        <span class="error" id="errorCategoria"></span>
+                    </div>
+                    <button type="submit" class="btn-submit">GUARDAR PRODUCTO</button>
+                    <p class="exito" id="mensaje"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GYMSHARK CLONE. PARA FINES EDUCATIVOS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
