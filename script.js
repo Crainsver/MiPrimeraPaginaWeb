@@ -170,3 +170,56 @@ corazonesProducto.forEach(corazon => {
         }
     });
 });
+
+// === 5. VALIDACIÓN DEL FORMULARIO DE REGISTRO ===
+const formRegistro = document.getElementById('formRegistro');
+
+if (formRegistro) {
+    formRegistro.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        let valid = true;
+
+        const nombre = document.getElementById('regNombre');
+        const email = document.getElementById('regEmail');
+        const password = document.getElementById('regPassword');
+
+        const errorNombre = document.getElementById('errorRegNombre');
+        const errorEmail = document.getElementById('errorRegEmail');
+        const errorPassword = document.getElementById('errorRegPassword');
+        const mensajeExito = document.getElementById('mensajeRegExito');
+
+        // Limpiar mensajes previos
+        errorNombre.textContent = '';
+        errorEmail.textContent = '';
+        errorPassword.textContent = '';
+        mensajeExito.textContent = '';
+
+        // Validaciones
+        if (nombre.value.trim() === '') {
+            errorNombre.textContent = 'El nombre es obligatorio.';
+            valid = false;
+        }
+        if (email.value.trim() === '') {
+            errorEmail.textContent = 'Ingrese un correo válido.';
+            valid = false;
+        }
+        if (password.value.trim().length < 6) {
+            errorPassword.textContent = 'La contraseña debe tener al menos 6 caracteres.';
+            valid = false;
+        }
+
+        // Éxito
+        if (valid) {
+    
+
+            mensajeExito.textContent = '¡CUENTA CREADA CON ÉXITO! Volviendo a la tienda...';
+            formRegistro.reset(); 
+            
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+    });
+
+
+}

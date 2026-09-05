@@ -222,11 +222,20 @@ body {
 }
 
 .video-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: #000;
+    max-width: 1000px; /* Reduce el ancho máximo para que no ocupe toda la pantalla */
+    margin: 20px auto 100px auto; /* Centra el video y le da espacio arriba y abajo */
+    border-radius: 12px; /* Le da bordes redondeados para un diseño más moderno */
+    overflow: hidden; /* Asegura que el video no se salga de los bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
 }
 
+.video-wrapper video, .video-wrapper iframe {
+    width: 100%;
+    height: auto;
+    max-height: 450px; /* Limita la altura máxima del video */
+    object-fit: cover; /* Evita que el video se deforme al cortarlo */
+    display: block; /* Elimina márgenes fantasma debajo del video */
+}
 .admin-container {
     max-width: 800px;
     margin: 0 auto;
