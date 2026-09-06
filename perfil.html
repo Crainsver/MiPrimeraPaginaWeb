@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gymshark Clone - Mi Perfil</title>
+    <title>FITSHARK - Mi Perfil</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -11,7 +11,7 @@
     <header>
         <nav class="main-nav" style="justify-content: center;">
             <div class="nav-center">
-                <a href="index.html" style="text-decoration: none; color: black;"><h1>GYMSHARK</h1></a>
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>FITSHARK</h1></a>
             </div>
         </nav>
     </header>
@@ -19,17 +19,23 @@
     <main style="padding: 60px 20px; background-color: #f9f9f9; min-height: 80vh;">
         <div class="admin-container" style="max-width: 400px; padding: 40px;">
             <h2 style="text-align: center; border-bottom: 2px solid #000; padding-bottom: 15px;">INICIAR SESIÓN</h2>
+            
             <form id="formPerfil" style="margin-top: 20px;">
                 <div class="campo">
-                    <label>CORREO ELECTRÓNICO</label>
-                    <input type="email" placeholder="tu@correo.com" required>
+                    <label for="loginEmail">CORREO ELECTRÓNICO</label>
+                    <input type="text" id="loginEmail" placeholder="tu@correo.com">
+                    <span class="error" id="errorLoginEmail"></span>
                 </div>
                 <div class="campo">
-                    <label>CONTRASEÑA</label>
-                    <input type="password" placeholder="********" required>
+                    <label for="loginPassword">CONTRASEÑA</label>
+                    <input type="password" id="loginPassword" placeholder="********">
+                    <span class="error" id="errorLoginPassword"></span>
                 </div>
-                <button type="button" class="btn-submit" onclick="alert('¡Sesión iniciada con éxito! Redirigiendo al inicio...'); window.location.href='index.html';">ENTRAR</button>
+                
+                <button type="submit" class="btn-submit" style="margin-top: 15px;">ENTRAR</button>
+                <div class="exito" id="mensajeLoginExito"></div>
             </form>
+            
             <p style="text-align: center; margin-top: 20px; font-size: 0.85rem; font-weight: 600;">
                 ¿No tienes cuenta? <a href="registro.html" style="color: #000;">Regístrate aquí</a>
             </p>

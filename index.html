@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gymshark Clone - Inicio</title>
+    <title>FitShark - Inicio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -20,14 +20,15 @@
                 <a href="accesorios.html">Accesorios</a>
             </div>
             <div class="nav-center">
-                <a href="index.html" style="text-decoration: none; color: black;"><h1>GYMSHARK</h1></a>
+                <a href="index.html" style="text-decoration: none; color: black;"><h1>FITSHARK</h1></a>
             </div>
             <div class="nav-right">
                 <div class="search-bar">
                     <span class="icon">🔍</span>
                     <input type="text" id="buscador" placeholder="Busca 'camiseta'...">
                 </div>
-                <!-- Íconos actualizados con enlaces -->
+
+                <!-- Íconos con enlaces -->
                 <div class="icons">
                 
                     <span style="cursor:pointer;" id="icono-favoritos" onclick="window.location.href='favoritos.html'" title="Mis Favoritos">🤍</span>
@@ -52,10 +53,10 @@
                 <h2>LO MÁS NUEVO</h2>
                 <a href="#" class="link-ver-todo">Ver todo</a>
             </div>
+
             <section class="video-section">
   <div class="video-wrapper">
     <video width="100%" controls autoplay muted loop>
-        <!-- Cambia "mi-video.mp4" por el nombre exacto de tu archivo -->
         <source src="videos/Gente haciendo deporte  Recurso web  Background Video - wprecursos (720p, h264).mp4" type="video/mp4">
         Tu navegador no soporta el formato de video.
     </video>
@@ -71,6 +72,13 @@
                     <div class="producto-info">
                         <h3>Camiseta Heavyweight Oversize</h3>
                         <p class="precio">$24.990</p>
+                        <select class="selector-talla" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; font-size: 0.8rem; cursor: pointer;">
+                        <option value="">Selecciona tu talla</option>
+                        <option value="S">Talla S</option>
+                        <option value="M">Talla M</option>
+                        <option value="L">Talla L</option>
+                        <option value="XL">Talla XL</option>
+                    </select>
                         <button class="btn-agregar-carrito" data-nombre="Camiseta Heavyweight Oversize" data-precio="24990">Añadir a la bolsa</button>
                     </div>
                 </article>
@@ -84,6 +92,13 @@
                     <div class="producto-info">
                         <h3>Leggings Adapt Animal</h3>
                         <p class="precio">$45.990</p>
+                          <select class="selector-talla" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; font-size: 0.8rem; cursor: pointer;">
+                        <option value="">Selecciona tu talla</option>
+                        <option value="S">Talla S</option>
+                        <option value="M">Talla M</option>
+                        <option value="L">Talla L</option>
+                        <option value="XL">Talla XL</option>
+                    </select>
                         <button class="btn-agregar-carrito" data-nombre="Leggings Adapt Animal" data-precio="45990">Añadir a la bolsa</button>
                     </div>
                 </article>
@@ -95,9 +110,16 @@
                         <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&q=80" alt="Short 5 inch">
                     </div>
                     <div class="producto-info">
-                        <h3>Short Deportivo 5"</h3>
+                        <h3>Short Deportivo Mujer"</h3>
                         <p class="precio">$29.990</p>
-                        <button class="btn-agregar-carrito" data-nombre="Short Deportivo 5 pulgadas" data-precio="29990">Añadir a la bolsa</button>
+                          <select class="selector-talla" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; font-size: 0.8rem; cursor: pointer;">
+                        <option value="">Selecciona tu talla</option>
+                        <option value="S">Talla S</option>
+                        <option value="M">Talla M</option>
+                        <option value="L">Talla L</option>
+                        <option value="XL">Talla XL</option>
+                    </select>
+                        <button class="btn-agregar-carrito" data-nombre="Short Deportivo Mujer" data-precio="29990">Añadir a la bolsa</button>
                     </div>
                 </article>
 
@@ -110,48 +132,28 @@
                     <div class="producto-info">
                         <h3>Top Deportivo Ruched</h3>
                         <p class="precio">$32.990</p>
+                          <select class="selector-talla" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; font-size: 0.8rem; cursor: pointer;">
+                        <option value="">Selecciona tu talla</option>
+                        <option value="S">Talla S</option>
+                        <option value="M">Talla M</option>
+                        <option value="L">Talla L</option>
+                        <option value="XL">Talla XL</option>
+                    </select>
                         <button class="btn-agregar-carrito" data-nombre="Top Deportivo Ruched" data-precio="32990">Añadir a la bolsa</button>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class="admin-section">
-            <div class="admin-container">
-                <h2>ADMINISTRACIÓN - AGREGAR PRODUCTO</h2>
-                <form id="formProducto">
-                    <div class="campo-doble">
-                        <div class="campo">
-                            <label for="codigo">CÓDIGO (SKU)</label>
-                            <input type="text" id="codigo" placeholder="Ej: GYM-001">
-                            <span class="error" id="errorCodigo"></span>
-                        </div>
-                        <div class="campo">
-                            <label for="nombre">NOMBRE DEL PRODUCTO</label>
-                            <input type="text" id="nombre" placeholder="Ej: Camiseta Vital">
-                            <span class="error" id="errorNombre"></span>
-                        </div>
-                    </div>
-                    <div class="campo">
-                        <label for="categoria">CATEGORÍA</label>
-                        <select id="categoria">
-                            <option value="">Selecciona una opción</option>
-                            <option value="hombre">Hombre</option>
-                            <option value="mujer">Mujeres</option>
-                            <option value="accesorios">Accesorios</option>
-                        </select>
-                        <span class="error" id="errorCategoria"></span>
-                    </div>
-                    <button type="submit" class="btn-submit">GUARDAR PRODUCTO</button>
-                    <p class="exito" id="mensaje"></p>
-                </form>
-            </div>
-        </section>
-    </main>
+
+            
 
     <footer>
-        <p>&copy; 2024 GYMSHARK CLONE. PARA FINES EDUCATIVOS.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2024 FITSHARK. PARA FINES EDUCATIVOS.</p>
+            <!-- Enlace discreto para el administrador -->
+            <a href="admin.html" style="color: #666; text-decoration: none; font-size: 0.7rem; margin-top: 10px; display: inline-block;">Acceso Administrador</a>
+        </footer>
 
     <script src="script.js"></script>
 </body>

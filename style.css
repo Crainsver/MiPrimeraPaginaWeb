@@ -12,11 +12,12 @@ body {
 
 /* PROMO BAR */
 .promo-bar {
-    background-color: #f6f6f6;
+    background-color: #000000;
     text-align: center;
     padding: 8px 0;
     font-size: 0.75rem;
     font-weight: 600;
+    color:#f1f0ee;
 }
 
 /* NAVEGACIÓN PRINCIPAL */
@@ -30,31 +31,31 @@ body {
 
 .nav-left a {
     text-decoration: none;
-    color: #000;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 650;
     margin-right: 25px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 .nav-center h1 {
     font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 2.0rem;
     letter-spacing: -1px;
 }
 
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 0px;
 }
 
 .search-bar {
-    background-color: #f4f4f4;
+    background-color: #e3e3e3;
     padding: 10px 15px;
     border-radius: 4px;
     display: flex;
     align-items: center;
-    width: 250px;
+    width: 220px;
 }
 
 .search-bar input {
@@ -93,7 +94,7 @@ body {
 
 /* HERO BANNER */
 .hero-banner {
-    height: 150px;
+    height: 200px;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80') center/cover;
     display: flex;
     align-items: flex-end;
@@ -222,8 +223,8 @@ body {
 }
 
 .video-wrapper {
-    max-width: 1000px; /* Reduce el ancho máximo para que no ocupe toda la pantalla */
-    margin: 20px auto 100px auto; /* Centra el video y le da espacio arriba y abajo */
+    max-width: 12000px; /* Reduce el ancho máximo para que no ocupe toda la pantalla */
+    margin: 10px auto 100px auto; /* Centra el video y le da espacio arriba y abajo */
     border-radius: 12px; /* Le da bordes redondeados para un diseño más moderno */
     overflow: hidden; /* Asegura que el video no se salga de los bordes redondeados */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
@@ -310,9 +311,7 @@ footer {
     font-weight: 600;
 }
 
-/* =========================================
-   ESTILOS DE LA PÁGINA DEL CARRITO 
-========================================= */
+/* ESTILOS DE LA PÁGINA DEL CARRITO  */
 .carrito-main {
     padding: 60px 20px;
     background-color: #f9f9f9;

@@ -2,41 +2,55 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro - Tienda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Aquí puedes copiar tu <nav> del index.html -->
+<body style="background-color: #f4f4f4;">
+    
+    <header style="background: #000; padding: 15px; text-align: center;">
+        <a href="index.html" style="color: #fff; text-decoration: none; font-weight: 800; font-size: 1.5rem;">FITSHARK - MODO ADMIN</a>
+    </header>
 
-    <main style="padding: 60px 20px; background-color: #f9f9f9; min-height: 70vh;">
+    <main style="padding: 60px 20px; min-height: 75vh;">
         <div class="admin-container">
-            <h2>Crea tu Cuenta</h2>
-            <form id="formRegistro">
+            <h2>AÑADIR NUEVO PRODUCTO</h2>
+            <form id="formProducto">
                 <div class="campo">
-                    <label for="regNombre">Nombre Completo</label>
-                    <input type="text" id="regNombre" placeholder="Ej: Jane Doe">
-                    <span class="error" id="errorRegNombre"></span>
+                    <label for="codigo">Código de Producto</label>
+                    <input type="text" id="codigo" placeholder="Ej: CAM-001">
+                    <span class="error" id="errorCodigo"></span>
                 </div>
                 
                 <div class="campo">
-                    <label for="regEmail">Correo Electrónico</label>
-                    <input type="email" id="regEmail" placeholder="ejemplo@correo.com">
-                    <span class="error" id="errorRegEmail"></span>
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" style="width: 100%; padding: 10px; border: 1px solid #ccc;">
+                        <option value="">Seleccione...</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+                    <span class="error" id="errorCategoria"></span>
                 </div>
-                
+
                 <div class="campo">
-                    <label for="regPassword">Contraseña</label>
-                    <input type="password" id="regPassword" placeholder="Mínimo 6 caracteres">
-                    <span class="error" id="errorRegPassword"></span>
+                    <label for="nombre">Nombre del Producto</label>
+                    <input type="text" id="nombre" placeholder="Ej: Camiseta Stringer Negra">
+                    <span class="error" id="errorNombre"></span>
                 </div>
-                
-                <button type="submit" class="btn-submit">REGISTRARSE</button>
-                <div class="exito" id="mensajeRegExito"></div>
+
+                <div class="campo">
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" placeholder="Ej: 12990">
+                    <span class="error" id="errorPrecio"></span>
+                </div>
+
+                <button type="submit" class="btn-submit" style="margin-top: 20px;">GUARDAR EN INVENTARIO</button>
+                <div class="exito" id="mensaje"></div>
             </form>
         </div>
     </main>
 
-    <!-- Aquí puedes copiar tu <footer> -->
     <script src="script.js"></script>
 </body>
 </html>

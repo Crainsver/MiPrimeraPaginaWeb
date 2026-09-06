@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gymshark Clone - Favoritos</title>
+    <title>FITSHARK - Favoritos</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="icons">
                     <span style="cursor:pointer; color: #d0021b;" title="Mis Favoritos">❤️</span>
-                    <a href="perfil.html" style="text-decoration: none; color: black;" title="Mi Perfil"><span>👤</span></a>
+                    <a href="perfil.html" style="text-decoration: none; color: black;" title="Mi Perfil"><span id="icono-perfil">👤</span></a>
                     <span style="cursor:pointer;" id="icono-bolsa" title="Mi Bolsa">🛍️</span>
                     <span id="contador-carrito" class="cart-counter">0</span>
                 </div>
@@ -41,19 +41,8 @@
             <h2>MIS FAVORITOS ❤️</h2>
             <p style="margin-bottom: 20px; font-weight: 600; font-size: 0.9rem;">Los artículos que te encantan, guardados en un solo lugar.</p>
             
-            <div class="grid-productos">
-                <!-- Producto Favorito Fijo de Ejemplo -->
-                <article class="producto-card">
-                    <div class="img-container">
-                        <span class="heart-icon" style="color: #d0021b;">❤️</span>
-                        <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=500&q=80" alt="Favorito 1">
-                    </div>
-                    <div class="producto-info">
-                        <h3>Camiseta Vital Seamless</h3>
-                        <p class="precio">$24.990</p>
-                        <button class="btn-agregar-carrito" data-nombre="Camiseta Vital Seamless" data-precio="24990">Mover a la bolsa</button>
-                    </div>
-                </article>
+            <!-- Aquí JavaScript inyectará los favoritos guardados -->
+            <div class="grid-productos" id="contenedor-favoritos">
             </div>
 
             <div style="margin-top: 40px;">
@@ -63,7 +52,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 GYMSHARK CLONE. PARA FINES EDUCATIVOS.</p>
+        <p>&copy; 2026 FITSHARK. PARA FINES EDUCATIVOS.</p>
     </footer>
 
     <script src="script.js"></script>
